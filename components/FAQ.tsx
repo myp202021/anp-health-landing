@@ -41,7 +41,7 @@ export default function FAQ() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-20 md:py-28 bg-navy-light relative overflow-hidden">
+    <section id="faq" className="py-16 md:py-20 bg-navy-light relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-1/4 w-[400px] h-[300px] bg-cyan/3 rounded-full blur-[100px]" />
       </div>

@@ -56,7 +56,7 @@ export default function Benefits() {
     <section
       id="beneficios"
       ref={ref}
-      className="py-20 md:py-28 bg-navy-light relative overflow-hidden"
+      className="py-16 md:py-20 bg-navy-light relative overflow-hidden"
     >
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-cyan/3 rounded-full blur-[120px]" />

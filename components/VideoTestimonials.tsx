@@ -15,7 +15,7 @@ export default function VideoTestimonials() {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
 
   return (
-    <section id="testimonios" className="py-20 md:py-28 bg-navy relative overflow-hidden">
+    <section id="testimonios" className="py-16 md:py-20 bg-navy relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cyan/3 rounded-full blur-3xl" />

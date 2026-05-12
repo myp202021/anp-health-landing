@@ -47,7 +47,7 @@ export default function BlogPreview() {
     <section
       id="blog"
       ref={ref}
-      className="py-20 md:py-28 bg-navy relative overflow-hidden"
+      className="py-16 md:py-20 bg-navy relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">

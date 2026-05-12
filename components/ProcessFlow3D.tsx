@@ -114,7 +114,7 @@ export default function ProcessFlow3D() {
     <section
       id="proceso"
       ref={sectionRef}
-      className="py-20 md:py-28 bg-navy relative overflow-hidden"
+      className="py-16 md:py-20 bg-navy relative overflow-hidden"
     >
       {/* Floating particles */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -177,7 +177,7 @@ export default function ProcessFlow3D() {
 
         {/* 3D Card Grid */}
         <div className="process-perspective">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto" style={{ gridAutoRows: '200px' }}>
             {steps.map((step, i) => {
               const isVisible = visibleSteps.has(i);
               const isActive = activeStep === i;

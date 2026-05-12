@@ -51,7 +51,7 @@ export default function WhyANP() {
   return (
     <section
       ref={ref}
-      className="py-20 md:py-28 bg-navy relative overflow-hidden"
+      className="py-16 md:py-20 bg-navy relative overflow-hidden"
     >
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-cyan/3 rounded-full blur-[100px]" />

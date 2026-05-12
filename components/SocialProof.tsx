@@ -82,7 +82,7 @@ const badges = [
 
 export default function SocialProof() {
   return (
-    <section className="py-20 md:py-28 relative overflow-hidden bg-gradient-to-b from-navy via-navy-light/50 to-navy">
+    <section className="py-16 md:py-20 relative overflow-hidden bg-gradient-to-b from-navy via-navy-light/50 to-navy">
       {/* Glow effects */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-cyan/5 rounded-full blur-[100px]" />

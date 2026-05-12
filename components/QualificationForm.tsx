@@ -84,7 +84,7 @@ export default function QualificationForm() {
   const displayStep = step > totalSteps ? totalSteps : step;
 
   return (
-    <section id="califica" className="py-20 md:py-28 bg-navy-light relative overflow-hidden">
+    <section id="califica" className="py-16 md:py-20 bg-navy-light relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-cyan/5 rounded-full blur-3xl" />
