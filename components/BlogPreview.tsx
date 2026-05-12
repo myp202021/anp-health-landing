@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 
 const articles = [
   {
+    slug: "nclex-rn-guia-2026",
     image: "/images/magnific_create-a-composition-with_2963212490.png",
     category: "Guia",
     title: "Guia NCLEX-RN 2026: Todo lo que necesitas saber",
@@ -11,6 +12,7 @@ const articles = [
       "El examen NCLEX-RN es el paso mas importante para obtener tu licencia de enfermeria en Estados Unidos. Te explicamos el proceso completo.",
   },
   {
+    slug: "estados-demanda-enfermeros",
     image: "/images/magnific_create-a-composition-with_2963236854.png",
     category: "Ranking",
     title: "Los 5 estados con mas demanda de enfermeros en EE.UU.",
@@ -18,6 +20,7 @@ const articles = [
       "Descubre cuales estados ofrecen las mejores condiciones salariales y calidad de vida para enfermeros internacionales.",
   },
   {
+    slug: "trumerit-validacion-credenciales",
     image: "/images/magnific__create-a-composicion-using-img2-as-reference-but-s__52460.png",
     category: "Noticias",
     title: "Que es TruMerit y por que es importante para tu proceso?",
@@ -64,9 +67,10 @@ export default function BlogPreview() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {articles.map((a, i) => (
-            <div
+            <a
               key={i}
-              className={`glass-card glass-card-hover rounded-2xl overflow-hidden group transition-all duration-700 cursor-pointer ${
+              href={`/blog/${a.slug}`}
+              className={`glass-card glass-card-hover rounded-2xl overflow-hidden group transition-all duration-700 block ${
                 visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: `${i * 150}ms` }}
@@ -98,7 +102,7 @@ export default function BlogPreview() {
                   </svg>
                 </span>
               </div>
-            </div>
+            </a>
           ))}
         </div>
 
