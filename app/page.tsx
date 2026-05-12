@@ -1,6 +1,8 @@
 import Hero from "@/components/Hero";
 import PainPoints from "@/components/PainPoints";
-import Methodology from "@/components/Methodology";
+import ProcessFlow3D from "@/components/ProcessFlow3D";
+import QualificationForm from "@/components/QualificationForm";
+import VideoTestimonials from "@/components/VideoTestimonials";
 import WhatWeDoAndDont from "@/components/WhatWeDoAndDont";
 import WhoQualifies from "@/components/WhoQualifies";
 import Benefits from "@/components/Benefits";
@@ -141,7 +143,9 @@ export default function Home() {
       <main>
         <Hero />
         <PainPoints />
-        <Methodology />
+        <ProcessFlow3D />
+        <QualificationForm />
+        <VideoTestimonials />
         <WhatWeDoAndDont />
         <WhoQualifies />
         <Benefits />
