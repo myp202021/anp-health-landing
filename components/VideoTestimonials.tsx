@@ -15,22 +15,22 @@ export default function VideoTestimonials() {
   const [activeVideo, setActiveVideo] = useState<string | null>(null);
 
   return (
-    <section className="py-20 md:py-28 bg-navy relative overflow-hidden">
+    <section id="testimonios" className="py-20 md:py-28 bg-navy relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-teal/3 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-cyan/3 rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-          <span className="text-teal text-sm font-semibold uppercase tracking-wider">
-            Videos
+          <span className="text-cyan text-sm font-semibold uppercase tracking-wider">
+            Historias reales
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4">
-            Escucha sus historias
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-3 mb-4">
+            Escucha a quienes ya dieron el paso
           </h2>
           <p className="text-slate max-w-2xl mx-auto">
-            Enfermeros que ya están en camino a ejercer en Estados Unidos
+            Enfermeros de toda Latinoamerica que confiaron en ANP Health para transformar su carrera
           </p>
         </div>
 
@@ -40,14 +40,14 @@ export default function VideoTestimonials() {
             <button
               key={video.id}
               onClick={() => setActiveVideo(video.id)}
-              className="group relative aspect-video rounded-2xl overflow-hidden glass-card border border-white/5 hover:border-teal/30 transition-all"
+              className="group relative aspect-video rounded-2xl overflow-hidden glass-card border border-white/5 hover:border-cyan/30 transition-all"
             >
               {/* Placeholder thumbnail */}
               <div className="absolute inset-0 bg-gradient-to-br from-navy-lighter to-navy flex items-center justify-center">
                 <div className="text-center">
-                  <div className="w-14 h-14 bg-teal/20 rounded-full flex items-center justify-center mx-auto mb-2 group-hover:bg-teal/30 group-hover:scale-110 transition-all">
+                  <div className="w-14 h-14 bg-cyan/20 rounded-full flex items-center justify-center mx-auto mb-2 group-hover:bg-cyan/30 group-hover:scale-110 transition-all">
                     <svg
-                      className="w-6 h-6 text-teal ml-0.5"
+                      className="w-6 h-6 text-cyan ml-0.5"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >
@@ -61,7 +61,7 @@ export default function VideoTestimonials() {
               </div>
 
               {/* Hover glow */}
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-t from-teal/10 to-transparent" />
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity bg-gradient-to-t from-cyan/10 to-transparent" />
             </button>
           ))}
         </div>

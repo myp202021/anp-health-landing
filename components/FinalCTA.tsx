@@ -1,39 +1,54 @@
+"use client";
+
 export default function FinalCTA() {
   return (
-    <section className="py-20 md:py-28 bg-navy-light relative overflow-hidden">
-      {/* Background glow */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-teal/5 rounded-full blur-3xl" />
+    <section className="py-24 md:py-32 relative overflow-hidden">
+      {/* Background photo + overlay */}
+      <div className="absolute inset-0">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "url('/images/magnific_create-a-composition-with_2963236854.png')",
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy/95 via-navy/90 to-navy/95" />
       </div>
 
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-        <span className="text-teal text-sm font-semibold uppercase tracking-wider">
-          Da el primer paso
-        </span>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mt-3 mb-6">
-          Tu carrera de enfermería en EE.UU.{" "}
-          <span className="text-teal">comienza hoy</span>
+      {/* Glow */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-cyan/8 rounded-full blur-[100px]" />
+      </div>
+
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+          Tu carrera en Estados Unidos{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan to-teal">
+            empieza con una conversacion
+          </span>
         </h2>
-        <p className="text-slate text-lg max-w-2xl mx-auto mb-10">
-          Agenda una asesoría gratuita y personalizada. Evaluamos tu
-          elegibilidad, respondemos todas tus preguntas y te mostramos el camino
-          paso a paso.
+        <p className="text-slate text-lg md:text-xl max-w-2xl mx-auto mb-10">
+          Agenda tu asesoria gratuita. Sin compromiso. Sin letra chica.
         </p>
 
         <a
           href="https://usa.anphealthsolutions.com"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 bg-teal hover:bg-teal-dark text-navy font-bold text-lg px-10 py-5 rounded-xl transition-all hover:scale-105 shadow-lg shadow-teal/20"
+          className="inline-block cta-glow text-navy font-bold text-lg px-12 py-5 rounded-full"
+          style={{ animation: "pulse-glow 3s ease-in-out infinite" }}
         >
-          Agenda tu Asesoría Gratuita
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-          </svg>
+          Agenda tu Asesoria Gratuita
         </a>
 
-        <p className="text-slate/60 text-sm mt-6">
-          Sin compromiso. Sin costo. 100% confidencial.
+        <p className="text-slate/60 text-sm mt-8">
+          O escribenos directamente:{" "}
+          <a
+            href="mailto:info@anphealthsolutions.com"
+            className="text-cyan hover:underline"
+          >
+            info@anphealthsolutions.com
+          </a>
         </p>
       </div>
     </section>

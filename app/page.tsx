@@ -1,16 +1,15 @@
+import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import PainPoints from "@/components/PainPoints";
+import SocialProof from "@/components/SocialProof";
 import ProcessFlow3D from "@/components/ProcessFlow3D";
+import WhyANP from "@/components/WhyANP";
 import QualificationForm from "@/components/QualificationForm";
-import VideoTestimonials from "@/components/VideoTestimonials";
-import WhatWeDoAndDont from "@/components/WhatWeDoAndDont";
-import WhoQualifies from "@/components/WhoQualifies";
 import Benefits from "@/components/Benefits";
-import Testimonials from "@/components/Testimonials";
+import VideoTestimonials from "@/components/VideoTestimonials";
+import BlogPreview from "@/components/BlogPreview";
 import FAQ from "@/components/FAQ";
-import Founder from "@/components/Founder";
 import FinalCTA from "@/components/FinalCTA";
-import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const organizationSchema = {
@@ -19,26 +18,26 @@ const organizationSchema = {
   name: "ANP Health Solutions",
   url: "https://usa.anphealthsolutions.com",
   description:
-    "Programa de validación de credenciales para enfermeros latinos que desean ejercer en Estados Unidos.",
+    "Programa de validacion de credenciales para enfermeros latinos que desean ejercer en Estados Unidos.",
   founder: {
     "@type": "Person",
     name: "Nelson Hurtado",
   },
   knowsAbout: [
-    "validar título enfermería Estados Unidos",
-    "homologación enfermería USA",
-    "NCLEX-RN preparación",
+    "validar titulo enfermeria Estados Unidos",
+    "homologacion enfermeria USA",
+    "NCLEX-RN preparacion",
     "enfermeros latinos Estados Unidos",
-    "licencia RN enfermería",
-    "validación credenciales enfermería",
+    "licencia RN enfermeria",
+    "validacion credenciales enfermeria",
     "TruMerit CGFNS",
-    "sponsor migratorio enfermería USA",
+    "sponsor migratorio enfermeria USA",
     "trabajar como enfermero en Estados Unidos",
-    "ANP Health programa enfermería",
+    "ANP Health programa enfermeria",
   ],
   areaServed: {
     "@type": "Place",
-    name: "Latinoamérica y Estados Unidos",
+    name: "Latinoamerica y Estados Unidos",
   },
 };
 
@@ -48,50 +47,66 @@ const faqSchema = {
   mainEntity: [
     {
       "@type": "Question",
-      name: "¿Necesito inglés avanzado para comenzar?",
+      name: "Necesito ingles avanzado para comenzar?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No. Puedes iniciar el proceso sin inglés avanzado. Durante el acompañamiento te orientamos sobre los requisitos de idioma según tu etapa.",
+        text: "No. Puedes iniciar el proceso sin ingles avanzado. Durante el acompanamiento te orientamos sobre los requisitos de idioma segun tu etapa.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Puedo aplicar si soy técnico en enfermería?",
+      name: "Puedo aplicar si soy tecnico en enfermeria?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Depende de tu país. Actualmente aceptamos técnicos superiores de Venezuela, Argentina y El Salvador. En la asesoría evaluamos tu caso particular.",
+        text: "Depende de tu pais. Actualmente aceptamos tecnicos superiores de Venezuela, Argentina y El Salvador. En la asesoria evaluamos tu caso particular.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Mi familia puede migrar conmigo?",
+      name: "Mi familia puede migrar conmigo?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sí. El sponsor migratorio incluye a tu cónyuge e hijos menores de 21 años.",
+        text: "Si. El sponsor migratorio incluye a tu conyuge e hijos menores de 21 anos.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Cuánto cuesta el programa?",
+      name: "Cuanto cuesta el programa?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Los costos varían según tu perfil y país de origen. Agenda una asesoría gratuita para recibir información personalizada.",
+        text: "Los costos varian segun tu perfil y pais de origen. Agenda una asesoria gratuita para recibir informacion personalizada.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Cuánto tiempo toma el proceso completo?",
+      name: "Cuanto tiempo toma el proceso completo?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "El tiempo varía según cada perfil, país de origen y documentación disponible. En la asesoría te damos un estimado personalizado.",
+        text: "El tiempo varia segun cada perfil, pais de origen y documentacion disponible. En la asesoria te damos un estimado personalizado.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Necesito experiencia profesional para iniciar?",
+      name: "Necesito experiencia profesional para iniciar?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No necesitas experiencia profesional para iniciar el proceso de validación de credenciales.",
+        text: "No necesitas experiencia profesional para iniciar el proceso de validacion de credenciales.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "ANP Health gestiona visas o empleo?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "ANP Health no es agencia de empleo ni firma migratoria. Somos especialistas en acompanamiento tecnico y administrativo para la validacion de credenciales de enfermeria.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Que pasa si no apruebo el NCLEX a la primera?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Es posible retomar el examen. Te orientamos sobre los tiempos de espera, recursos de estudio y estrategias para tu siguiente intento.",
       },
     },
   ],
@@ -100,15 +115,15 @@ const faqSchema = {
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Programa de Validación de Credenciales de Enfermería",
+  name: "Programa de Validacion de Credenciales de Enfermeria",
   provider: {
     "@type": "Organization",
     name: "ANP Health Solutions",
   },
   description:
-    "Acompañamiento completo para enfermeros latinos que desean validar su título y obtener la licencia RN en Estados Unidos.",
-  serviceType: "Validación de credenciales profesionales",
-  areaServed: "Latinoamérica y Estados Unidos",
+    "Acompanamiento completo para enfermeros latinos que desean validar su titulo y obtener la licencia RN en Estados Unidos.",
+  serviceType: "Validacion de credenciales profesionales",
+  areaServed: "Latinoamerica y Estados Unidos",
   aggregateRating: {
     "@type": "AggregateRating",
     ratingValue: "4.9",
@@ -143,15 +158,14 @@ export default function Home() {
       <main>
         <Hero />
         <PainPoints />
+        <SocialProof />
         <ProcessFlow3D />
+        <WhyANP />
         <QualificationForm />
-        <VideoTestimonials />
-        <WhatWeDoAndDont />
-        <WhoQualifies />
         <Benefits />
-        <Testimonials />
+        <VideoTestimonials />
+        <BlogPreview />
         <FAQ />
-        <Founder />
         <FinalCTA />
       </main>
       <Footer />

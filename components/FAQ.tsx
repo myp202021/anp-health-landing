@@ -4,94 +4,115 @@ import { useState } from "react";
 
 const faqs = [
   {
-    question: "¿Necesito inglés avanzado para comenzar?",
-    answer:
-      "No. Puedes iniciar el proceso sin inglés avanzado. Durante el acompañamiento te orientamos sobre los requisitos de idioma según tu etapa. El inglés será necesario para el NCLEX-RN y para ejercer, pero no es un requisito para dar el primer paso.",
+    q: "Necesito ingles avanzado para comenzar?",
+    a: "No. Puedes iniciar el proceso sin ingles avanzado. Durante el acompanamiento te orientamos sobre los requisitos de idioma segun tu etapa. El nivel de ingles se evalua en el momento del examen de certificacion (TOEFL, IELTS u OET).",
   },
   {
-    question: "¿Puedo aplicar si soy técnico en enfermería?",
-    answer:
-      "Depende de tu país de origen. Actualmente aceptamos técnicos superiores de Venezuela, Argentina y El Salvador. Si eres de otro país, agenda una asesoría para evaluar tu caso particular.",
+    q: "Puedo aplicar si soy tecnico en enfermeria?",
+    a: "Depende de tu pais. Actualmente aceptamos tecnicos superiores de Venezuela, Argentina y El Salvador. En la asesoria evaluamos tu caso particular y te indicamos las opciones disponibles.",
   },
   {
-    question: "¿Mi familia puede migrar conmigo?",
-    answer:
-      "Sí. El sponsor migratorio que gestionan los hospitales aliados incluye a tu cónyuge e hijos menores de 21 años. Es un proceso legal y seguro para toda tu familia.",
+    q: "Mi familia puede migrar conmigo?",
+    a: "Si. El sponsor migratorio incluye a tu conyuge e hijos menores de 21 anos. Es un proceso legal y estructurado para toda tu familia.",
   },
   {
-    question: "¿Cuánto cuesta el programa?",
-    answer:
-      "Los costos varían según tu perfil, país de origen y situación particular. Agenda una asesoría gratuita para recibir información personalizada y detallada sobre la inversión.",
+    q: "Cuanto cuesta el programa?",
+    a: "Los costos varian segun tu perfil, pais de origen y documentacion disponible. Agenda una asesoria gratuita para recibir informacion personalizada sin ningun compromiso.",
   },
   {
-    question: "¿Cuánto tiempo toma el proceso completo?",
-    answer:
-      "El tiempo varía según cada perfil, país de origen, documentación disponible y otros factores. En la asesoría personalizada te damos un estimado basado en tu situación específica.",
+    q: "Cuanto tiempo toma el proceso?",
+    a: "El tiempo varia segun cada perfil, pais de origen y documentacion disponible. En la asesoria te damos un estimado personalizado basado en tu situacion especifica.",
   },
   {
-    question: "¿Necesito experiencia profesional para iniciar?",
-    answer:
-      "No necesitas experiencia profesional para iniciar el proceso de validación de credenciales. Lo importante es contar con tu título de enfermería. La experiencia puede ser un plus, pero no es un requisito.",
+    q: "Necesito experiencia laboral para iniciar?",
+    a: "No necesitas experiencia profesional para iniciar el proceso de validacion de credenciales. Lo que se evalua es tu formacion academica.",
+  },
+  {
+    q: "ANP Health gestiona visas o empleo?",
+    a: "ANP Health no es agencia de empleo, ni firma migratoria, ni escuela. Somos especialistas en acompanamiento tecnico y administrativo para la validacion de credenciales de enfermeria. Te conectamos con hospitales aliados que gestionan el sponsor migratorio.",
+  },
+  {
+    q: "Que pasa si no apruebo el NCLEX a la primera?",
+    a: "Es posible retomar el examen. Te orientamos sobre los tiempos de espera, recursos de estudio y estrategias para tu siguiente intento. El proceso no se pierde.",
   },
 ];
 
 export default function FAQ() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-20 md:py-28 bg-navy-light">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="faq" className="py-20 md:py-28 bg-navy-light relative overflow-hidden">
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 right-1/4 w-[400px] h-[300px] bg-cyan/3 rounded-full blur-[100px]" />
+      </div>
+
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <span className="text-teal text-sm font-semibold uppercase tracking-wider">
-            Preguntas Frecuentes
+          <span className="text-cyan text-sm font-semibold uppercase tracking-wider">
+            Resuelve tus dudas
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4">
-            Resolvemos tus dudas
+          <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-5">
+            Preguntas Frecuentes
           </h2>
-          <p className="text-slate max-w-2xl mx-auto">
-            Las preguntas más comunes de enfermeros que están evaluando dar el
-            paso.
-          </p>
         </div>
 
-        <div className="max-w-3xl mx-auto space-y-3">
-          {faqs.map((faq, i) => (
-            <div
-              key={i}
-              className="glass-card rounded-xl overflow-hidden"
-            >
-              <button
-                onClick={() => setOpenIndex(openIndex === i ? null : i)}
-                className="w-full flex items-center justify-between p-5 text-left hover:bg-white/2 transition-colors"
+        <div className="space-y-3">
+          {faqs.map((faq, i) => {
+            const isOpen = openIndex === i;
+            return (
+              <div
+                key={i}
+                className={`glass-card rounded-2xl overflow-hidden transition-all duration-300 ${
+                  isOpen ? "border-cyan/30" : ""
+                }`}
               >
-                <span className="font-semibold text-sm md:text-base pr-4">
-                  {faq.question}
-                </span>
-                <svg
-                  className={`w-5 h-5 text-teal shrink-0 transition-transform duration-200 ${
-                    openIndex === i ? "rotate-180" : ""
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
+                <button
+                  onClick={() => setOpenIndex(isOpen ? null : i)}
+                  className="w-full text-left px-6 py-5 flex items-center justify-between gap-4"
                 >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-              {openIndex === i && (
-                <div className="px-5 pb-5">
-                  <p className="text-slate text-sm leading-relaxed">
-                    {faq.answer}
-                  </p>
+                  <span className="text-off-white font-medium text-[15px]">
+                    {faq.q}
+                  </span>
+                  <svg
+                    className={`w-5 h-5 text-cyan flex-shrink-0 transition-transform duration-300 ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M19 9l-7 7-7-7"
+                    />
+                  </svg>
+                </button>
+                <div className={`faq-content ${isOpen ? "open" : ""}`}>
+                  <div>
+                    <p className="px-6 pb-5 text-slate text-sm leading-relaxed">
+                      {faq.a}
+                    </p>
+                  </div>
                 </div>
-              )}
-            </div>
-          ))}
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="text-center mt-12">
+          <p className="text-slate text-sm mb-4">
+            Tienes mas preguntas?
+          </p>
+          <a
+            href="https://usa.anphealthsolutions.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 cta-glow text-navy font-bold text-sm px-8 py-3 rounded-full"
+          >
+            Habla con un asesor
+          </a>
         </div>
       </div>
     </section>

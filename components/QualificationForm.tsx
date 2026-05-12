@@ -87,12 +87,12 @@ export default function QualificationForm() {
     <section id="califica" className="py-20 md:py-28 bg-navy-light relative overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-teal/5 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-cyan/5 rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-12">
-          <span className="text-teal text-sm font-semibold uppercase tracking-wider">
+          <span className="text-cyan text-sm font-semibold uppercase tracking-wider">
             Evaluación rápida
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4">
@@ -111,7 +111,7 @@ export default function QualificationForm() {
               <div key={i} className="flex-1 h-1.5 rounded-full overflow-hidden bg-white/10">
                 <div
                   className={`h-full rounded-full transition-all duration-500 ${
-                    i < displayStep ? "bg-teal w-full" : "w-0"
+                    i < displayStep ? "bg-cyan w-full" : "w-0"
                   }`}
                   style={{ width: i < displayStep ? "100%" : "0%" }}
                 />
@@ -123,7 +123,7 @@ export default function QualificationForm() {
           </div>
 
           {/* Form card */}
-          <div className="glass-card rounded-2xl p-8 border border-teal/10 shadow-[0_0_40px_rgba(0,201,219,0.08)]">
+          <div className="glass-card rounded-2xl p-8 border border-cyan/10 shadow-[0_0_40px_rgba(0,201,219,0.08)]">
             <div
               className={`transition-all duration-300 ${
                 transitioning
@@ -147,7 +147,7 @@ export default function QualificationForm() {
                         value={name}
                         onChange={(e) => setName(e.target.value)}
                         placeholder="Tu nombre"
-                        className="w-full bg-navy/60 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-slate/50 focus:outline-none focus:border-teal/50 focus:ring-1 focus:ring-teal/30 transition-colors"
+                        className="w-full bg-navy/60 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-slate/50 focus:outline-none focus:border-cyan/50 focus:ring-1 focus:ring-cyan/30 transition-colors"
                       />
                     </div>
                     <div>
@@ -159,7 +159,7 @@ export default function QualificationForm() {
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         placeholder="tu@email.com"
-                        className="w-full bg-navy/60 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-slate/50 focus:outline-none focus:border-teal/50 focus:ring-1 focus:ring-teal/30 transition-colors"
+                        className="w-full bg-navy/60 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-slate/50 focus:outline-none focus:border-cyan/50 focus:ring-1 focus:ring-cyan/30 transition-colors"
                       />
                     </div>
                     <div>
@@ -171,7 +171,7 @@ export default function QualificationForm() {
                         value={phone}
                         onChange={(e) => setPhone(e.target.value)}
                         placeholder="+58 412 123 4567"
-                        className="w-full bg-navy/60 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-slate/50 focus:outline-none focus:border-teal/50 focus:ring-1 focus:ring-teal/30 transition-colors"
+                        className="w-full bg-navy/60 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-slate/50 focus:outline-none focus:border-cyan/50 focus:ring-1 focus:ring-cyan/30 transition-colors"
                       />
                     </div>
                   </div>
@@ -191,7 +191,7 @@ export default function QualificationForm() {
                         onClick={() => setProfession(p.id)}
                         className={`w-full text-left px-5 py-4 rounded-xl border transition-all ${
                           profession === p.id
-                            ? "border-teal bg-teal/10 text-white shadow-[0_0_15px_rgba(0,201,219,0.15)]"
+                            ? "border-cyan bg-cyan/10 text-white shadow-[0_0_15px_rgba(0,201,219,0.15)]"
                             : "border-white/10 bg-navy/40 text-slate hover:border-white/20 hover:text-white"
                         }`}
                       >
@@ -199,12 +199,12 @@ export default function QualificationForm() {
                           <div
                             className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors ${
                               profession === p.id
-                                ? "border-teal"
+                                ? "border-cyan"
                                 : "border-white/20"
                             }`}
                           >
                             {profession === p.id && (
-                              <div className="w-2.5 h-2.5 rounded-full bg-teal" />
+                              <div className="w-2.5 h-2.5 rounded-full bg-cyan" />
                             )}
                           </div>
                           <span className="text-sm font-medium">{p.label}</span>
@@ -228,7 +228,7 @@ export default function QualificationForm() {
                         onClick={() => setCountry(c.id)}
                         className={`w-full text-left px-5 py-4 rounded-xl border transition-all ${
                           country === c.id
-                            ? "border-teal bg-teal/10 text-white shadow-[0_0_15px_rgba(0,201,219,0.15)]"
+                            ? "border-cyan bg-cyan/10 text-white shadow-[0_0_15px_rgba(0,201,219,0.15)]"
                             : "border-white/10 bg-navy/40 text-slate hover:border-white/20 hover:text-white"
                         }`}
                       >
@@ -236,12 +236,12 @@ export default function QualificationForm() {
                           <div
                             className={`w-5 h-5 rounded-full border-2 flex items-center justify-center transition-colors ${
                               country === c.id
-                                ? "border-teal"
+                                ? "border-cyan"
                                 : "border-white/20"
                             }`}
                           >
                             {country === c.id && (
-                              <div className="w-2.5 h-2.5 rounded-full bg-teal" />
+                              <div className="w-2.5 h-2.5 rounded-full bg-cyan" />
                             )}
                           </div>
                           <span className="text-sm font-medium">{c.label}</span>
@@ -284,7 +284,7 @@ export default function QualificationForm() {
                         href="https://usa.anphealthsolutions.com"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block bg-teal hover:bg-teal-dark text-navy font-bold text-base px-8 py-4 rounded-xl transition-all hover:scale-105 shadow-lg shadow-teal/20"
+                        className="inline-block cta-glow text-navy font-bold text-base px-8 py-4 rounded-full"
                       >
                         Agenda tu Asesoría Gratuita
                       </a>
@@ -356,7 +356,7 @@ export default function QualificationForm() {
                   )}
                   <button
                     onClick={handleNext}
-                    className="bg-teal hover:bg-teal-dark text-navy font-bold text-sm px-6 py-3 rounded-xl transition-all hover:scale-105 flex items-center gap-2"
+                    className="bg-cyan hover:bg-cyan-dark text-navy font-bold text-sm px-6 py-3 rounded-xl transition-all hover:scale-105 flex items-center gap-2"
                   >
                     {step === 1 ? "Comenzar evaluación" : "Siguiente"}
                     <svg

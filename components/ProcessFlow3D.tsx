@@ -134,12 +134,12 @@ export default function ProcessFlow3D() {
       </div>
 
       {/* Glow orbs */}
-      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-teal/5 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-teal/3 rounded-full blur-3xl" />
+      <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-cyan/5 rounded-full blur-3xl" />
+      <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-cyan/3 rounded-full blur-3xl" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <span className="text-teal text-sm font-semibold uppercase tracking-wider">
+          <span className="text-cyan text-sm font-semibold uppercase tracking-wider">
             Tu camino
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4">
@@ -166,7 +166,7 @@ export default function ProcessFlow3D() {
                   key={i}
                   className={`w-5 h-5 rounded-full border-2 transition-all duration-500 ${
                     visibleSteps.has(i)
-                      ? "bg-teal border-teal shadow-[0_0_10px_rgba(0,201,219,0.5)]"
+                      ? "bg-cyan border-teal shadow-[0_0_10px_rgba(0,201,219,0.5)]"
                       : "bg-navy border-white/20"
                   }`}
                 />
@@ -203,10 +203,10 @@ export default function ProcessFlow3D() {
                       <div className="absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-transparent via-teal/40 to-transparent" />
 
                       <div className="flex items-center gap-3 mb-4">
-                        <span className="text-teal/20 text-3xl font-bold">
+                        <span className="text-cyan/20 text-3xl font-bold">
                           {step.number}
                         </span>
-                        <div className="w-10 h-10 bg-teal/10 rounded-lg flex items-center justify-center text-teal">
+                        <div className="w-10 h-10 bg-cyan/10 rounded-lg flex items-center justify-center text-cyan">
                           <svg
                             className="w-5 h-5"
                             fill="none"
@@ -243,7 +243,7 @@ export default function ProcessFlow3D() {
                     <div className="process-card-face process-card-back glass-card rounded-2xl p-6 cursor-pointer">
                       <div className="absolute top-0 left-4 right-4 h-px bg-gradient-to-r from-transparent via-teal to-transparent" />
                       <div className="flex items-center gap-2 mb-3">
-                        <div className="w-8 h-8 bg-teal/20 rounded-lg flex items-center justify-center text-teal">
+                        <div className="w-8 h-8 bg-cyan/20 rounded-lg flex items-center justify-center text-cyan">
                           <svg
                             className="w-4 h-4"
                             fill="none"
@@ -258,11 +258,11 @@ export default function ProcessFlow3D() {
                             />
                           </svg>
                         </div>
-                        <span className="text-teal font-bold text-sm">
+                        <span className="text-cyan font-bold text-sm">
                           Paso {step.number}
                         </span>
                       </div>
-                      <h3 className="text-sm font-bold mb-2 text-teal">
+                      <h3 className="text-sm font-bold mb-2 text-cyan">
                         {step.title}
                       </h3>
                       <p className="text-off-white text-xs leading-relaxed">

@@ -1,12 +1,51 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Anko';
+  src: url('/fonts/anp-fonts-AnkoPersonalUse.otf') format('opentype');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Anko';
+  src: url('/fonts/anp-fonts-Anko-PersonalUse-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Anko';
+  src: url('/fonts/anp-fonts-Anko-PersonalUse-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'DM Sans';
+  src: url('/fonts/anp-fonts-DMSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'DM Sans';
+  src: url('/fonts/anp-fonts-DMSans-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'DM Sans';
+  src: url('/fonts/anp-fonts-DMSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+}
+
 @theme {
-  --color-navy: #0A1628;
-  --color-navy-light: #132040;
-  --color-navy-lighter: #1A2D55;
-  --color-teal: #00C9DB;
-  --color-teal-dark: #00A8B8;
-  --color-teal-light: #33D4E2;
+  --color-navy: #18234b;
+  --color-navy-light: #303863;
+  --color-navy-lighter: #3d6c91;
+  --color-steel: #3d6c91;
+  --color-teal: #73bcdb;
+  --color-teal-dark: #3d6c91;
+  --color-teal-light: #7ff2ff;
+  --color-cyan: #7ff2ff;
   --color-slate: #8892A4;
   --color-off-white: #F0F4F8;
 }
@@ -16,22 +55,30 @@ html {
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Anko', system-ui, sans-serif;
+}
+
+/* ===== Animations ===== */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .animate-fade-in-up {
   animation: fadeInUp 0.6s ease-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out forwards;
 }
 
 @keyframes countUp {
@@ -43,21 +90,69 @@ body {
   animation: countUp 0.3s ease-out forwards;
 }
 
-/* Smooth gradient overlay for hero */
-.hero-gradient {
-  background: linear-gradient(135deg, #0A1628 0%, #132040 50%, #0A1628 100%);
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
 
-/* Teal gradient for accent sections */
-.teal-gradient {
-  background: linear-gradient(135deg, #00C9DB 0%, #00A8B8 100%);
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(127, 242, 255, 0.2); }
+  50% { box-shadow: 0 0 40px rgba(127, 242, 255, 0.4), 0 0 60px rgba(127, 242, 255, 0.1); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Hero animated mesh gradient */
+.hero-mesh {
+  background:
+    radial-gradient(ellipse 80% 50% at 20% 40%, rgba(61, 108, 145, 0.15) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 40% at 80% 60%, rgba(115, 188, 219, 0.1) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 50% at 50% 20%, rgba(127, 242, 255, 0.05) 0%, transparent 70%),
+    linear-gradient(180deg, #0f172a 0%, #18234b 40%, #1a2550 100%);
+  background-size: 200% 200%, 200% 200%, 200% 200%, 100% 100%;
+  animation: gradientShift 12s ease-in-out infinite;
 }
 
 /* Glass effect for cards */
 .glass-card {
   background: rgba(19, 32, 64, 0.6);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 201, 219, 0.15);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(115, 188, 219, 0.12);
+}
+
+.glass-card-hover:hover {
+  background: rgba(24, 38, 75, 0.8);
+  border-color: rgba(127, 242, 255, 0.25);
+  box-shadow: 0 0 30px rgba(127, 242, 255, 0.08);
+}
+
+/* CTA glow button */
+.cta-glow {
+  background: linear-gradient(135deg, #7ff2ff 0%, #73bcdb 100%);
+  box-shadow: 0 4px 20px rgba(127, 242, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.cta-glow:hover {
+  box-shadow: 0 6px 30px rgba(127, 242, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Subtle grid pattern overlay */
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(127, 242, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(127, 242, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
 }
 
 /* ===== Process Flow 3D ===== */
@@ -118,7 +213,7 @@ body {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: rgba(0, 201, 219, 0.3);
+  background: rgba(127, 242, 255, 0.3);
   animation: connectorPulse 2s ease-in-out infinite;
 }
 
@@ -139,7 +234,7 @@ body {
 .process-particle {
   position: absolute;
   bottom: -10px;
-  background: rgba(0, 201, 219, 0.4);
+  background: rgba(127, 242, 255, 0.4);
   border-radius: 50%;
   animation: floatUp linear infinite;
   pointer-events: none;
@@ -160,4 +255,25 @@ body {
     transform: translateY(-100vh) scale(0.3);
     opacity: 0;
   }
+}
+
+/* Section divider gradient line */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(127, 242, 255, 0.2), transparent);
+}
+
+/* FAQ accordion */
+.faq-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s ease;
+}
+
+.faq-content.open {
+  grid-template-rows: 1fr;
+}
+
+.faq-content > div {
+  overflow: hidden;
 }

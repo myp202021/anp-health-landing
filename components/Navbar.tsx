@@ -1,49 +1,70 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+
+const links = [
+  { href: "#proceso", label: "Proceso" },
+  { href: "#califica", label: "Calificas?" },
+  { href: "#beneficios", label: "Beneficios" },
+  { href: "#testimonios", label: "Testimonios" },
+  { href: "#blog", label: "Blog" },
+  { href: "#faq", label: "FAQ" },
+];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-navy/90 backdrop-blur-md border-b border-white/5">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-navy/95 backdrop-blur-xl border-b border-cyan/10 shadow-lg shadow-black/20"
+          : "bg-transparent"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          <a href="#" className="flex items-center gap-2">
-            <span className="text-xl font-bold text-white">
-              ANP <span className="text-teal">Health</span>
-            </span>
+        <div className="flex items-center justify-between h-18 md:h-20">
+          <a href="#" className="flex items-center gap-3 group">
+            <img
+              src="/images/anp-logo-7.png"
+              alt="ANP Health Solutions"
+              className="h-10 md:h-12 w-auto"
+            />
           </a>
 
           {/* Desktop nav */}
-          <div className="hidden md:flex items-center gap-8">
-            <a href="#metodologia" className="text-sm text-slate hover:text-white transition-colors">
-              Metodología
-            </a>
-            <a href="#beneficios" className="text-sm text-slate hover:text-white transition-colors">
-              Beneficios
-            </a>
-            <a href="#elegibilidad" className="text-sm text-slate hover:text-white transition-colors">
-              Elegibilidad
-            </a>
-            <a href="#faq" className="text-sm text-slate hover:text-white transition-colors">
-              Preguntas Frecuentes
-            </a>
+          <div className="hidden lg:flex items-center gap-7">
+            {links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="text-sm text-slate hover:text-cyan transition-colors duration-200 tracking-wide"
+              >
+                {link.label}
+              </a>
+            ))}
             <a
               href="https://usa.anphealthsolutions.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-teal hover:bg-teal-dark text-navy font-semibold text-sm px-5 py-2.5 rounded-lg transition-colors"
+              className="cta-glow text-navy font-bold text-sm px-6 py-2.5 rounded-full"
             >
-              Agenda tu Asesoría
+              Agenda Asesoria Gratuita
             </a>
           </div>
 
           {/* Mobile hamburger */}
           <button
-            className="md:hidden p-2 text-white"
+            className="lg:hidden p-2 text-white"
             onClick={() => setOpen(!open)}
-            aria-label="Abrir menú"
+            aria-label="Abrir menu"
           >
             <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               {open ? (
@@ -56,30 +77,32 @@ export default function Navbar() {
         </div>
 
         {/* Mobile menu */}
-        {open && (
-          <div className="md:hidden pb-4 space-y-3">
-            <a href="#metodologia" onClick={() => setOpen(false)} className="block text-sm text-slate hover:text-white">
-              Metodología
-            </a>
-            <a href="#beneficios" onClick={() => setOpen(false)} className="block text-sm text-slate hover:text-white">
-              Beneficios
-            </a>
-            <a href="#elegibilidad" onClick={() => setOpen(false)} className="block text-sm text-slate hover:text-white">
-              Elegibilidad
-            </a>
-            <a href="#faq" onClick={() => setOpen(false)} className="block text-sm text-slate hover:text-white">
-              Preguntas Frecuentes
-            </a>
+        <div
+          className={`lg:hidden overflow-hidden transition-all duration-300 ${
+            open ? "max-h-96 pb-6" : "max-h-0"
+          }`}
+        >
+          <div className="space-y-1 pt-2">
+            {links.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="block text-base text-slate hover:text-cyan py-2.5 px-3 rounded-lg hover:bg-white/5 transition-all"
+              >
+                {link.label}
+              </a>
+            ))}
             <a
               href="https://usa.anphealthsolutions.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="block bg-teal text-navy font-semibold text-sm px-5 py-2.5 rounded-lg text-center"
+              className="block cta-glow text-navy font-bold text-base px-6 py-3 rounded-full text-center mt-4"
             >
-              Agenda tu Asesoría
+              Agenda Asesoria Gratuita
             </a>
           </div>
-        )}
+        </div>
       </div>
     </nav>
   );
