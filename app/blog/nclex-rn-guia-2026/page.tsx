@@ -94,7 +94,7 @@ export default function NclexGuide() {
             </li>
           </ul>
           <p className="text-slate leading-relaxed mb-6">
-            Para enfermeros internacionales, antes de poder registrarse al NCLEX-RN, es necesario completar un proceso de validacion de credenciales a traves de organizaciones como TruMerit (respaldada por CGFNS International). Este paso confirma que tu educacion y formacion clinica son equivalentes a los estandares estadounidenses.
+            Para enfermeros internacionales, antes de poder registrarse al NCLEX-RN, es necesario completar un proceso de <a href="/blog/trumerit-validacion-credenciales" className="text-cyan hover:underline">validacion de credenciales a traves de TruMerit</a> (respaldada por CGFNS International). Este paso confirma que tu educacion y formacion clinica son equivalentes a los estandares estadounidenses. El estado donde apliques tambien importa — conoce <a href="/blog/estados-demanda-enfermeros" className="text-cyan hover:underline">los 5 estados con mas demanda de enfermeros</a> para elegir estrategicamente.
           </p>
 
           {/* Section 3 */}
@@ -383,7 +383,7 @@ export default function NclexGuide() {
               rel="noopener noreferrer"
               className="cta-glow text-navy font-bold text-sm px-8 py-3 rounded-full inline-block"
             >
-              Agenda tu Asesoria Gratuita
+              Agenda tu Asesoría Gratuita
             </a>
             <p className="text-slate/40 text-xs mt-4">
               Sin costo. Sin compromiso. Personalizada segun tu perfil.

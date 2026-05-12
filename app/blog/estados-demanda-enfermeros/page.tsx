@@ -140,7 +140,7 @@ export default function EstadosDemanda() {
             Estados Unidos enfrenta una escasez critica de enfermeros que se ha intensificado en los ultimos anos. Segun la Oficina de Estadisticas Laborales (BLS), se proyectan mas de 200,000 vacantes anuales para Registered Nurses hasta 2031. Esta demanda representa una oportunidad significativa para enfermeros internacionales que buscan desarrollar su carrera en el sistema de salud mas avanzado del mundo.
           </p>
           <p className="text-slate leading-relaxed mb-4">
-            Sin embargo, no todos los estados son iguales. Las condiciones salariales, el costo de vida, los requisitos de licenciamiento y la calidad de vida varian enormemente de un estado a otro. Elegir el estado correcto puede hacer una diferencia significativa en tu experiencia profesional y personal.
+            Sin embargo, no todos los estados son iguales. Las condiciones salariales, el costo de vida, los requisitos de licenciamiento y la calidad de vida varian enormemente. Antes de elegir estado, necesitas completar la <a href="/blog/trumerit-validacion-credenciales" className="text-cyan hover:underline">validacion de credenciales con TruMerit</a> y aprobar el <a href="/blog/nclex-rn-guia-2026" className="text-cyan hover:underline">examen NCLEX-RN</a>. Una vez listo, el estado que elijas puede hacer una diferencia significativa en tu experiencia profesional y personal.
           </p>
           <p className="text-slate leading-relaxed mb-6">
             En este articulo analizamos los 5 estados con mayor demanda de enfermeros, comparando salarios, costos, requisitos y tiempos de licenciamiento para ayudarte a tomar una decision informada.
@@ -300,7 +300,7 @@ export default function EstadosDemanda() {
               rel="noopener noreferrer"
               className="cta-glow text-navy font-bold text-sm px-8 py-3 rounded-full inline-block"
             >
-              Agenda tu Asesoria Gratuita
+              Agenda tu Asesoría Gratuita
             </a>
             <p className="text-slate/40 text-xs mt-4">
               Sin costo. Sin compromiso. Personalizada segun tu perfil.

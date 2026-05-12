@@ -73,7 +73,7 @@ export default function TruMeritArticle() {
             Por que la validacion de credenciales es fundamental
           </h2>
           <p className="text-slate leading-relaxed mb-4">
-            La validacion de credenciales es un requisito obligatorio para enfermeros internacionales que buscan obtener la licencia RN en Estados Unidos. Sin este paso, no puedes registrarte para el NCLEX-RN ni aplicar al Board of Nursing de ningun estado.
+            La validacion de credenciales es un requisito obligatorio para enfermeros internacionales que buscan obtener la licencia RN en Estados Unidos. Sin este paso, no puedes registrarte para el <a href="/blog/nclex-rn-guia-2026" className="text-cyan hover:underline">examen NCLEX-RN</a> ni aplicar al Board of Nursing de ningun estado. El estado que elijas tambien importa — revisa <a href="/blog/estados-demanda-enfermeros" className="text-cyan hover:underline">los 5 estados con mas demanda</a> para tu decision.
           </p>
           <p className="text-slate leading-relaxed mb-4">
             El proposito de la validacion es verificar que tu educacion de enfermeria sea equivalente a la formacion que reciben los enfermeros en Estados Unidos. Esto incluye:
@@ -360,7 +360,7 @@ export default function TruMeritArticle() {
               rel="noopener noreferrer"
               className="cta-glow text-navy font-bold text-sm px-8 py-3 rounded-full inline-block"
             >
-              Agenda tu Asesoria Gratuita
+              Agenda tu Asesoría Gratuita
             </a>
             <p className="text-slate/40 text-xs mt-4">
               Sin costo. Sin compromiso. Personalizada segun tu perfil.
