@@ -75,10 +75,10 @@ export default function Hero() {
       {/* Photo background with overlay */}
       <div className="absolute inset-0 pointer-events-none">
         <div
-          className="absolute inset-0 bg-cover bg-center" style={{ opacity: 0.35 }}
+          className="absolute inset-0 bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url('/images/nurse-tablet.jpg')",
+            backgroundImage: "url('/images/nurse-tablet.jpg')",
+            opacity: 0.35,
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0f172a]/70 via-navy/65 to-navy/90" />
