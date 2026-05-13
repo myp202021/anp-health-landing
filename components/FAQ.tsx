@@ -43,7 +43,7 @@ export default function FAQ() {
   return (
     <section id="faq" className="py-16 md:py-20 bg-navy-light relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-1/4 w-[400px] h-[300px] bg-cyan/3 rounded-full blur-[100px]" />
+        <div className="absolute top-0 right-1/4 w-[400px] h-[300px] bg-cyan/3 rounded-full blur-3xl" />
       </div>
 
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">

@@ -75,7 +75,7 @@ export default function Hero() {
       {/* Photo background with overlay */}
       <div className="absolute inset-0 pointer-events-none">
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-8"
+          className="absolute inset-0 bg-cover bg-center opacity-5"
           style={{
             backgroundImage:
               "url('/images/magnific_create-a-composicion-usin_2963158518.png')",
@@ -85,8 +85,8 @@ export default function Hero() {
       </div>
 
       {/* Floating accent orbs */}
-      <div className="absolute top-1/4 right-1/4 w-80 h-80 bg-cyan/5 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-1/3 left-1/6 w-60 h-60 bg-teal/5 rounded-full blur-[80px] pointer-events-none" />
+      <div className="absolute top-1/4 right-1/4 w-80 h-80 bg-cyan/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/3 left-1/6 w-60 h-60 bg-teal/5 rounded-full blur-2xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 md:py-36 relative z-10 w-full">
         <div

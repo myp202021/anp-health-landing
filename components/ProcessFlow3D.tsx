@@ -80,7 +80,7 @@ export default function ProcessFlow3D() {
 
   useEffect(() => {
     setParticles(
-      Array.from({ length: 20 }).map(() => ({
+      Array.from({ length: 8 }).map(() => ({
         left: `${Math.random() * 100}%`,
         delay: `${Math.random() * 8}s`,
         duration: `${6 + Math.random() * 6}s`,

@@ -124,8 +124,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Glass effect for cards */
 .glass-card {
   background: rgba(19, 32, 64, 0.6);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(115, 188, 219, 0.12);
 }
 
