@@ -78,7 +78,7 @@ export default function Hero() {
           className="absolute inset-0 bg-cover bg-center opacity-5"
           style={{
             backgroundImage:
-              "url('/images/magnific_create-a-composicion-usin_2963158518.png')",
+              "url('/images/anp-thumb-1.jpg')",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0f172a]/95 via-navy/90 to-navy" />

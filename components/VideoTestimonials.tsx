@@ -3,12 +3,12 @@
 import { useState } from "react";
 
 const videos = [
-  { id: "VIDEO_ID_1", label: "Testimonio 1" },
-  { id: "VIDEO_ID_2", label: "Testimonio 2" },
-  { id: "VIDEO_ID_3", label: "Testimonio 3" },
-  { id: "VIDEO_ID_4", label: "Testimonio 4" },
-  { id: "VIDEO_ID_5", label: "Testimonio 5" },
-  { id: "VIDEO_ID_6", label: "Testimonio 6" },
+  { id: "VIDEO_ID_1", label: "Testimonio 1", thumb: "/images/anp-thumb-1.jpg" },
+  { id: "VIDEO_ID_2", label: "Testimonio 2", thumb: "/images/anp-thumb-3.jpg" },
+  { id: "VIDEO_ID_3", label: "Testimonio 3", thumb: "/images/anp-thumb-5.jpg" },
+  { id: "VIDEO_ID_4", label: "Testimonio 4", thumb: "/images/anp-thumb-7.jpg" },
+  { id: "VIDEO_ID_5", label: "Testimonio 5", thumb: "/images/anp-thumb-8.jpg" },
+  { id: "VIDEO_ID_6", label: "Testimonio 6", thumb: "/images/anp-thumb-9.jpg" },
 ];
 
 export default function VideoTestimonials() {
@@ -42,8 +42,9 @@ export default function VideoTestimonials() {
               onClick={() => setActiveVideo(video.id)}
               className="group relative aspect-video rounded-2xl overflow-hidden glass-card border border-white/5 hover:border-cyan/30 transition-all"
             >
-              {/* Placeholder thumbnail */}
-              <div className="absolute inset-0 bg-gradient-to-br from-navy-lighter to-navy flex items-center justify-center">
+              {/* Thumbnail from video */}
+              <div className="absolute inset-0 flex items-center justify-center" style={{ backgroundImage: `url(${video.thumb})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                <div className="absolute inset-0 bg-navy/40" />
                 <div className="text-center">
                   <div className="w-14 h-14 bg-cyan/20 rounded-full flex items-center justify-center mx-auto mb-2 group-hover:bg-cyan/30 group-hover:scale-110 transition-all">
                     <svg
