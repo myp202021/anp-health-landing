@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 const articles = [
   {
     slug: "nclex-rn-guia-2026",
-    image: "/images/anp-thumb-5.jpg",
+    image: "/images/nurse-gloves.jpg",
     category: "Guia",
     title: "Guia NCLEX-RN 2026: Todo lo que necesitas saber",
     excerpt:
@@ -13,7 +13,7 @@ const articles = [
   },
   {
     slug: "estados-demanda-enfermeros",
-    image: "/images/anp-thumb-7.jpg",
+    image: "/images/nurse-patient.jpg",
     category: "Ranking",
     title: "Los 5 estados con mas demanda de enfermeros en EE.UU.",
     excerpt:
@@ -21,7 +21,7 @@ const articles = [
   },
   {
     slug: "trumerit-validacion-credenciales",
-    image: "/images/anp-thumb-8.jpg",
+    image: "/images/nurse-tablet.jpg",
     category: "Noticias",
     title: "Que es TruMerit y por que es importante para tu proceso?",
     excerpt:

@@ -78,7 +78,7 @@ export default function Hero() {
           className="absolute inset-0 bg-cover bg-center opacity-5"
           style={{
             backgroundImage:
-              "url('/images/anp-thumb-1.jpg')",
+              "url('/images/nurse-tablet.jpg')",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-[#0f172a]/95 via-navy/90 to-navy" />

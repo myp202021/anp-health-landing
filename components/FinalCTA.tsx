@@ -9,7 +9,7 @@ export default function FinalCTA() {
           className="absolute inset-0 bg-cover bg-center"
           style={{
             backgroundImage:
-              "url('/images/anp-thumb-3.jpg')",
+              "url('/images/nurse-team.jpg')",
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-navy/95 via-navy/90 to-navy/95" />
