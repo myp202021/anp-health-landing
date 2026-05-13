@@ -75,13 +75,13 @@ export default function Hero() {
       {/* Photo background with overlay */}
       <div className="absolute inset-0 pointer-events-none">
         <div
-          className="absolute inset-0 bg-cover bg-center opacity-5"
+          className="absolute inset-0 bg-cover bg-center" style={{ opacity: 0.35 }}
           style={{
             backgroundImage:
               "url('/images/nurse-tablet.jpg')",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0f172a]/95 via-navy/90 to-navy" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0f172a]/70 via-navy/65 to-navy/90" />
       </div>
 
       {/* Floating accent orbs */}
