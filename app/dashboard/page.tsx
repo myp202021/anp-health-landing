@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import DashboardClient from "./DashboardClient";
+import DashboardGate from "./DashboardGate";
 
 export const metadata: Metadata = {
-  title: "Dashboard | ANP Health Solutions",
-  description: "Dashboard de rendimiento Google Ads para ANP Health Solutions — metricas US y Latinoamerica.",
-  robots: { index: false, follow: false },
+  title: "Dashboard — ANP Health Solutions",
+  description: "Dashboard de rendimiento Google Ads en tiempo real",
+  robots: "noindex, nofollow",
 };
 
 export default function DashboardPage() {
-  return <DashboardClient />;
+  return <DashboardGate />;
 }
