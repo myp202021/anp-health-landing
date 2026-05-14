@@ -601,15 +601,20 @@ export default function DashboardClient() {
             {/* Left: Logo + title */}
             <div className="flex items-center gap-4">
               <img
-                src="https://www.mulleryperez.cl/logo-color.png"
-                alt="M&P"
-                className="h-8 w-auto"
+                src="/images/anp-logo-1.png"
+                alt="ANP Health"
+                className="h-10 w-auto"
               />
-              <div className="h-6 w-px bg-gray-300" />
+              <div className="h-8 w-px bg-gray-300" />
               <div>
                 <h1 className="text-lg font-bold text-gray-900 leading-tight">ANP HEALTH SOLUTIONS</h1>
                 <p className="text-xs text-gray-500">Dashboard de rendimiento Google Ads</p>
               </div>
+              <img
+                src="https://www.mulleryperez.cl/logo-color.png"
+                alt="M&P"
+                className="h-6 w-auto opacity-50 ml-4 hidden sm:block"
+              />
             </div>
 
             {/* Right: Date range picker */}
